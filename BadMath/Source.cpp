@@ -1,23 +1,28 @@
 #include <iostream>
 #include <iomanip>
+
 using namespace std;
 
-float average(int i1, int i2, int i3)
-{
-	return i1 + i2 + i3 / 3.0f;
-}
+float average(int i1, int i2, int i3);
 
 int main()
 {
-	int n1 =0 , n2 = 0, n3 = 0;
-	cout << "This program calculates the average of three numbers." << endl;
-	cout << "First number: "; cin >> n1;
-	cout << "Second number: "; cin >> n2;
-	cout << "Third number: "; cin >> n2;
+	int num1 = 0 , num2 = 0, num3 = 0;
+	cout << "\nThis program calculates the average of three numbers." << endl;
+	cout << "\nFirst number: "; cin >> num1;
+	cout << "\nSecond number: "; cin >> num2;
+	cout << "\nThird number: "; cin >> num3;
 
-	float a = average(n1, n2, n3);
+	float a = average(num1, num2, num3);
 
-	cout << setprecision(1) << fixed << "The average is " << a << endl;
+	cout << setprecision(2) << fixed;
+	cout << "\nThe average is " << a << endl;
 
 	return 0;
+}
+
+float average(int num1, int num2, int num3)
+{
+	float average = ((num1 + num2 + num3) / 3.00f);
+	return average;
 }
